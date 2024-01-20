@@ -13,6 +13,9 @@ const app = express();
 //Middleware
 app.use(express.json());
 
+//Routes
+app.use("/api/auth", require("./routes/auth"));
+
 //Running The Server
 PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
